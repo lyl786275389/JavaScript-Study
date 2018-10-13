@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<div class="c1">
+			<img src="img/Harvest_Moon_02.png" >
+			<img src="img/Harvest_Moon_03.png" >
+			<button>点我</button>
+		</div>
+	</body>
+	<script src="js/jquery.3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+// 		$('img').click(function(){
+// 			alert(1);
+// 		});
+		$(document).on('click','img',function(){
+			alert(1);
+		});
+		$('button').click(function(){
+			$('button').before('<img src="img/Harvest_Moon_02.png" >');
+		});
+	</script>
+</html>

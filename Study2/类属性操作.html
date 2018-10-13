@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			.red{
+				color: red;
+			}
+			.bblue{
+				background-color: blue;
+			}
+			.f40{
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="red bblue f40">hello</div>
+		<div>hello</div>
+		<div>hello</div>
+		<div>hello</div>
+		<button>点我</button>
+	</body>
+	<script src="js/jquery.3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// $('div').first().attr('class','red bblue f40');
+		//   $('div').first().addClass('bblue f40');
+		$('div').first().removeClass('bblue');
+	
+		$('button').click(function(){
+			$('div').last().toggleClass('red');
+		});
+	</script>
+</html>

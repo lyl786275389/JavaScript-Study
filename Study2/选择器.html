@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<div>hello</div>
+		<div class="c1">hello</div>
+		<div id="d1" class="c1">hello</div>
+		<!-- <div class="c2">
+			<div>world</div>
+		</div> -->
+		<div>world</div>
+	</body>
+	<script src="js/jquery.3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// $('#d1').css('color','red');
+		// $('.c2 div').css('color','red');
+		
+		// $('div#d1.c1').css('color','red');
+		$('div:eq(1)').css('color','red');
+	</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			#d1{
+				height: 256px;
+				background-color: burlywood;
+			}
+			#d2{
+				height: 256px;
+				background-color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<img src="img/Harvest_Moon_02.png" >
+			<img src="img/Harvest_Moon_03.png" >
+			<img src="img/Harvest_Moon_04.png" >
+			<img src="img/Harvest_Moon_05.png" >
+		</div>
+		<div id="d2">
+			
+		</div>
+		<button>点我</button>
+	</body>
+	<script src="js/jquery.3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('img').click(function(){
+			$('#d2').append($(this).clone(true));
+			//$(this).appendTo('#d2');
+		});
+// 		$('button').click(function(){
+// 			$('#d2').append('<img src="img/Harvest_Moon_02.png" >');
+// 		});
+	</script>
+</html>

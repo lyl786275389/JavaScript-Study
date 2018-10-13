@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			textarea{
+				width: 300px;
+				height: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<p>
+				姓名：
+			</p>
+			<p>
+				<input type="text" name="name" value="123" placeholder="姓名" autofocus>
+			</p>
+			<p>
+				密码：
+			</p>
+			<p>
+				<input type="password" name="password" value="123">
+			</p>
+			<p>
+				性别：
+			</p>
+			<p>
+				<label>
+					<input type="radio" name="gender" value="男"> 男
+				</label>
+				<label>
+					<input type="radio" name="gender"  value="女" checked> 女
+				</label>
+			</p>
+			<p>
+				爱好
+			</p>
+			<p>
+				<label>
+					<input type="checkbox" name="love" value="lol"> lol
+				</label>
+				<label>
+					<input type="checkbox" name="love" value="吃鸡" checked> 吃鸡
+				</label>
+				<label>
+					<input type="checkbox" name="love" value="王者荣耀" checked> 王者荣耀
+				</label>
+			</p>
+			<p>
+				城市：
+			</p>
+			<p>
+				<select name="city">
+					<option value="太原">太原</option>
+					<option value="北京" selected>北京</option>
+					<option value="上海">上海</option>
+				</select>
+			</p>
+			<p>
+				个人简介：
+			</p>
+			<p>
+				<textarea name="note">123</textarea>
+			</p>
+			<p>
+				<input type="submit">
+			</p>
+		</form>
+	</body>
+	<script src="js/jquery.3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//普通表单框|密码框:
+		//获取值:
+		// alert($('[name=name]').val());
+		//修改值:
+		// $(':text').val('456');
+		
+		//单选:
+		//获取:
+		//alert($(':radio:checked').val());
+		//修改:
+		// $(':radio').first().prop('checked',true);
+		
+		//多选:
+		//获取:
+		//	alert($(':checkbox').serialize());
+		//修改:
+			//$(':checkbox').first().prop('checked',true);
+			
+		//下拉:
+		//获取:
+		//alert($('select').val());
+		//修改:
+		//$('select').val('上海');
+		
+		//文本域:
+		//获取:
+		//alert($('textarea').html());
+		//修改:
+		$('textarea').html('hello');
+	</script>
+</html>

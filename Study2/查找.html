@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div>
+					<h1>hello</h1>
+					<div></div>
+				</div>
+			</div>
+		</div>
+		<div class="c1">
+			<div>
+				<button>点我</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			//$(this).parent().parent().prev().children('div').children('div').children('h1').css('color','red');
+			$(this).parents('.c1').prev().find('h1').css('color','red');
+		});
+	</script>
+</html>
