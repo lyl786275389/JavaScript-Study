@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		date = new Date();
+		date.setFullYear('1999');
+		date.setMonth(5);
+		
+		year = date.getFullYear()
+		month = date.getMonth()+1;
+		day = date.getDate();
+		hour = date.getHours();
+		minute = date.getMinutes();
+		second = date.getSeconds();
+		
+		str = year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;
+		alert(str);
+	</script>
+</html>

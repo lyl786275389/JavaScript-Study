@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 450px;
+				height: 200px;
+				background-color: black;
+				color: #0f0;
+				line-height: 200px;
+				text-align: center;
+				font-size: 40px;
+				border-radius: 200px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='d1'></div>
+		<button id='d2'>开始</button>
+		<button id='d3'>暂停</button>
+	</body>
+	<script type="text/javascript">
+		d1 = document.getElementById('d1');
+		d2 = document.getElementById('d2');
+		d3 = document.getElementById('d3');
+		
+		function getTime(){
+			date = new Date();
+			year = date.getFullYear()
+			month = date.getMonth()+1;
+			day = date.getDate();
+			hour = date.getHours();
+			minute = date.getMinutes();
+			if(minute<10){
+				minute = '0'+minute;
+			}
+			second = date.getSeconds();
+			str = year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;
+			//修改标签内容:
+			d1.innerHTML = str;	
+		}
+		getTime();
+		t = setInterval(getTime,1000);
+		
+		d3.onclick = function(){
+			clearInterval(t);
+		}
+		
+		d2.onclick = function(){
+			t = setInterval(getTime,1000);
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<img src="" id='d2'>
+		<button id='d1'>点我</button>
+	</body>
+	<script type="text/javascript">
+// 		n = 100.8;
+// 		alert(Math.ceil(n));
+// 		alert(Math.floor(n));
+// 		alert(Math.round(n));
+		arr = ['1.png','2.png','3.png','4.png','5.png'];
+		d1 = document.getElementById('d1');
+		d2 = document.getElementById('d2');
+		d1.onclick = function(){
+			d2.src= 'img/'+arr[Math.floor(Math.random()*5)];
+		}
+		
+		
+	</script>
+</html>

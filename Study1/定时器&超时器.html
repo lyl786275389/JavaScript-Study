@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<button id='d1'>点我</button>
+	</body>
+	<script type="text/javascript">
+		
+		//超时器(延时器):
+// 		setTimeout(function (){
+// 			alert(1);
+// 		},2000);
+		
+		//定时器:
+		t = setInterval(function(){
+			console.log('调用');
+		},2000);
+		
+		d1 = document.getElementById('d1');
+		d1.onclick = function(){
+			clearInterval(t);
+		}
+	</script>
+</html>

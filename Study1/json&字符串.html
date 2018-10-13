@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		jsobj = {
+			"name":"小明",
+			"age":20,
+			"books":["语文","英语","数学"]
+			};
+		console.log(jsobj);
+		
+		//json对象->字符串:
+		s = JSON.stringify(jsobj);
+		s = '{"name":"小明","age":20,"books":["语文","英语","数学"]}';
+		
+		//字符串->json对象:
+		jsobj2 = JSON.parse(s);
+		alert(jsobj2['age']);
+		
+	</script>
+</html>
