@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			.err{
+				color: red;
+				font-size: 12px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="">
+			<p>
+				姓名：
+			</p>
+			<p>
+				<input type="text" name="name">
+				<div id="nameMsg" class="err"></div>
+			</p>
+			<p>
+				密码：
+			</p>
+			<p>
+				<input type="password" name="pwd">
+				<div id="pwdMsg" class="err"></div>
+			</p>
+			<p>
+				再次输入密码：
+			</p>
+			<p>
+				<input type="password" name="repwd">
+				<div id="repwdMsg" class="err"></div>
+			</p>
+			<p>
+				<input type="submit">
+			</p>
+		</form>
+	</body>
+	<script src="js/jquery.3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('form').validate({
+			rules:{
+				name:{
+					required:true,
+					rangelength:[5,8]
+				},
+				pwd:'required',
+				repwd:{
+					equalTo:"[name=pwd]"
+				}
+			},
+			messages:{
+				name:{
+					required:'必须输入用户名',
+					rangelength:'用户名必须是5-8位'
+				},
+				pwd:'密码不能为空',
+				repwd:{
+					equalTo:'两次密码输入不一致'
+				}
+			},
+			errorPlacement: function(error, element) {  
+// 				console.log(error[0]);
+// 				console.log(element[0]);
+// 				error.appendTo(element.parent());  
+				name = element.attr('name');
+				$('#'+name+'Msg').append(error);
+			}
+		});
+	</script>
+</html>
